@@ -15,10 +15,12 @@ public class Author {
     public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private String firstname;
     private String lastname;
     private String username;
+    @JsonIgnore
     private String password;
 
     @OneToMany
